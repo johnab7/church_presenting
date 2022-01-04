@@ -68,7 +68,7 @@ const Custom = () => {
         })
     }
     function clear() {
-       localStorage.clear()
+       localStorage.setItem("c","[]")
        relode()
     }
     function add(t) {

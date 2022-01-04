@@ -4,6 +4,7 @@ import Tab from "react-bootstrap/Tab";
 import Bible from "./bible"
 import LiveT from "./live-t"
 import Custom from "./custom";
+import Set from "./settings"
 const Admin = () => {
     return (
         <div>
@@ -26,6 +27,7 @@ const Admin = () => {
                     <Custom></Custom>
                 </Tab>
                 <Tab eventKey="settings" title="Settings">
+                    <Set></Set>
                 </Tab>
 
             </Tabs>
