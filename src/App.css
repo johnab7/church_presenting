@@ -1,38 +1,32 @@
-.App {
+.bible-select-div{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+  .cen{
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .cene{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btn-mar{
+    margin-left: 1rem;
+  }
+  
+  .main{
+    height: 100vh;
+    font-size: calc(3vh + 6 * ((100vw - 320px) / 680));
+    text-align: center;
+    overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .om{
+    vertical-align: middle;
   }
-}
+  
