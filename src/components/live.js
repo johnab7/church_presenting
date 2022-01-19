@@ -33,7 +33,6 @@ const Live = () => {
     <Textfit className="main" style={s && {color: s.tc, background:`url(${s.bi}) no-repeat center center fixed`,backgroundSize: "100% 100%"}} scroll="no">
       <div dangerouslySetInnerHTML={{ __html: v }} />
     </Textfit>
-
   );
 }
 export default Live;
