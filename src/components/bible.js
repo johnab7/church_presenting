@@ -55,6 +55,7 @@ const Bible = () => {
                         var l = getVerce(obj.book, obj.chapter, obj.verse)
                         setPreviewLive(l.e + " " + l.r)
                         sendLive(getLive(l))
+                        console.log(l.r)
                     }}
                 >
                     {({

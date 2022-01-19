@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Textfit } from 'react-textfit';
 
 const mc = new BroadcastChannel('mc');
 
@@ -22,7 +23,6 @@ const Live = () => {
 
       }
       else {
-        console.log(message.data)
         setV(message.data)
       }
     };
@@ -30,9 +30,10 @@ const Live = () => {
   }, []);
 
   return (
-    <div className="main" style={s && {color: s.tc, background:`url(${s.bi}) no-repeat center center fixed`,backgroundSize: "100% 100%"}} scroll="no">
-      <div className="om" dangerouslySetInnerHTML={{ __html: v }} />
-    </div>
+    <Textfit className="main" style={s && {color: s.tc, background:`url(${s.bi}) no-repeat center center fixed`,backgroundSize: "100% 100%"}} scroll="no">
+      <div dangerouslySetInnerHTML={{ __html: v }} />
+    </Textfit>
+
   );
 }
 export default Live;
