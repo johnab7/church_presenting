@@ -15,7 +15,7 @@ const Custom = () => {
     const handleShow = () => setShow(true);
     var [t, setT] = useState();
     useEffect(() => {
-        let c = localStorage.getItem("c")
+        var c = localStorage.getItem("c")
         c = JSON.parse(c)
         setItems(c)
     }, []);
@@ -30,6 +30,13 @@ const Custom = () => {
           }        localStorage.setItem("c",JSON.stringify(c))
         relode()
     }
+    function truncateString(string, limit) {
+        if (string.length > limit) {
+          return string.substring(0, limit) + "..."
+        } else {
+          return string
+        }
+      }
     const handleChange = e => {
         const fileReader = new FileReader();
         fileReader.readAsText(e.target.files[0], "UTF-8");
@@ -127,7 +134,7 @@ const Custom = () => {
                             <Card.Body>
                                 <div className="cen">
                                     <Card.Text>
-                                        {item.c}
+                                        {truncateString(item.c, 600)}
                                     </Card.Text>
                                     <Button variant="primary" onClick={() => sendLive(item.c)}>Go Live</Button>{"    "}
                                     <Button variant="danger" className="btm-mar" onClick={() => del(items.indexOf(item))}>Delete</Button>
