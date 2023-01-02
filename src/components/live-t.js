@@ -30,7 +30,7 @@ const LiveT = () => {
                 <h2>Live Preview</h2>
 
                 <br></br>
-                <iframe title='preview' width={"75%"} height={"42%"} src={window.location.origin + "/live"}>
+                <iframe title='preview'  src={window.location.origin + "/live"}>
 
                 </iframe>
             </div>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
 import Modal from 'react-bootstrap/Modal'
 import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.bubble.css'; // ES6
@@ -10,9 +9,18 @@ import 'react-quill/dist/quill.bubble.css'; // ES6
 const Custom = () => {
     const mc = new BroadcastChannel('mc');
     var [items, setItems] = useState();
+    const [dEdit, setdEdit] = useState(null);
+    const [EditIndex, setEditIndex] = useState(null);
+    const [showG, setShowG] = useState(false);
     const [show, setShow] = useState(false);
+    const [showE, setShowE] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const handleCloseG = () => setShowG(false);
+    const handleShowG = () => setShowG(true);
+    const handleShowE = () => setShowE(true);
+    const handleCloseE = () => setShowE(false);
+
     var [t, setT] = useState();
     useEffect(() => {
         var c = localStorage.getItem("c")
@@ -70,7 +78,7 @@ const Custom = () => {
         e.preventDefault()
         downloadFile({
             data: localStorage.getItem("c"),
-            fileName: 'downlode.cp',
+            fileName: 'custom.cp',
             fileType: 'text/json',
         })
     }
@@ -95,11 +103,47 @@ const Custom = () => {
         relode()
         handleClose()
     }
+
+    function edit(s) {
+        setdEdit(items[s].c)
+        setEditIndex(s)
+        handleShowE();
+    }
+
+    function editC(t) {
+        var c = localStorage.getItem("c")
+        c = JSON.parse(c)
+    c[EditIndex] = {
+            c:t
+        }
+        localStorage.setItem("c",JSON.stringify(c))
+        relode()
+        handleCloseE()
+        setdEdit(null)
+    }
+
+    function Gen(text) {
+        text = text.replace(/\d\. /g, "");
+        text = text.replace(/\d\.  /g, "");
+        text = text.replace(/\d\. /g, "");
+        text = text.replace(/\d\./g, "");
+        const array = text.split(/<p><br><\/p>/).map(chunk => ({ c: chunk })).filter(chunk => chunk.c !== "<p><br></p>");
+        console.log(JSON.stringify(array));
+        localStorage.setItem("c",JSON.stringify(array))
+        relode()
+        handleCloseG()
+}
+ 
+
+
     return (
         <div >
             <div className="cen">
                 <Button variant="primary" onClick={handleShow}>
                     Add New
+                </Button>
+                <Button variant="secondary" className="btn-mar" type='button' onClick={handleShowG}>
+                Genarate
                 </Button>
                 <Button variant="success" className="btn-mar" type='button' onClick={exportToJson}>
                     Export
@@ -108,7 +152,6 @@ const Custom = () => {
                     Clear
                 </Button>
                 <input type="file" accept=".cp" className="btn-primary btn-mar" onChange={handleChange} />
-
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -125,24 +168,56 @@ const Custom = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <br></br>
-            <Row xs={1} md={5} className="g-4">
 
+            <Modal show={showE} onHide={handleCloseE}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Add New</Modal.Title>
+                </Modal.Header>
+                <Modal.Body><ReactQuill defaultValue={dEdit} onChange={(values) => setT(values)}
+                                        theme="bubble" /></Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseE}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={() => editC(t)}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+            <Modal show={showG} onHide={handleCloseG}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Genarate</Modal.Title>
+                </Modal.Header>
+                <Modal.Body><ReactQuill defaultValue={dEdit} onChange={(values) => setT(values)}
+                                        theme="bubble" /></Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseG}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={() => Gen(t)}>
+                        Genarate cp
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+            <br></br>   
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6">
                 {items && items.map((item) => (
-                    <Col>
-                        <Card style={{ width: '18rem' }}>
+                    <Col style={{}}>
+                        <Card style={{ width: '17rem' }}>
                             <Card.Body>
                                 <div className="cen">
                                     <Card.Text>
                                         {truncateString(item.c, 600)}
                                     </Card.Text>
                                     <Button variant="primary" onClick={() => sendLive(item.c)}>Go Live</Button>{"    "}
+                                    <Button variant="secondary" className="btm-mar" onClick={() => edit(items.indexOf(item))}>Edit</Button>
                                     <Button variant="danger" className="btm-mar" onClick={() => del(items.indexOf(item))}>Delete</Button>
-
                                 </div>
                             </Card.Body>
                         </Card></Col>))}
-            </Row>
+            </div>
         </div>
     );
 }

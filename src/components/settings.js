@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button'
 
-
 const Set = () => {
     var [f, setF] = useState();
     const mc = new BroadcastChannel('mc');
@@ -30,9 +29,11 @@ const Set = () => {
         <div className="cen">
             <br></br>
             <form onSubmit={settingsHandleSubmit}>
+                <h5>Background Image:</h5>
                 <input type="file"  className="btn-primary btn-mar" onChange={handleChange} />
                 <br></br>
                 <br></br>
+                <h5>Text Color:</h5>
                 <input type="color" id="color" name="color" />
                 <br></br>
                 <br></br>

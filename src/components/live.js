@@ -20,7 +20,7 @@ const Live = () => {
       if (message.data === 1) {
         r()
         console.log(message.data)
-
+        window.location.reload(false);
       }
       else {
         setV(message.data)
