@@ -16,14 +16,13 @@
     margin-left: 1rem;
   }
 
-  .main{
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  }
+    .main{
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
   

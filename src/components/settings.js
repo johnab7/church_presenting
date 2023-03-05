@@ -16,10 +16,12 @@ const Set = () => {
     function settingsHandleSubmit(event) {
         event.preventDefault()
         let tc = event.currentTarget.elements.color.value
+        let ws = event.currentTarget.elements.ws.value
         let bi = f
         let l = {
             tc:tc,
-            bi:bi
+            bi:bi,
+            ws:ws
         }
         localStorage.setItem("s",JSON.stringify(l))
         mc.postMessage(1)
@@ -37,8 +39,11 @@ const Set = () => {
                 <input type="color" id="color" name="color" />
                 <br></br>
                 <br></br>
+                <h5>OBS Websocket url:</h5>
+                <input type="text" id="ws" name="ws" />
+                <br></br>
+                <br></br>
                 <Button type="submit" variant="primary" >Save</Button>
-
                 </form>
         </div>
     );
