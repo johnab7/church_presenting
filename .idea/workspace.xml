@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68e98dae-1bec-4a7f-a0b0-4f531ad14a9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/bible/bible.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/S.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/ls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bible.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bible.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bible.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/live-t.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/live-t.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sameuel-yarasani/Documents/Projects/react/church_presenting&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sameuel-yarasani/Documents/Projects/react-native/songs of zion/soz&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -51,6 +52,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/bible" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -89,11 +95,34 @@
       <workItem from="1677273124917" duration="107000" />
       <workItem from="1677273251795" duration="18000" />
       <workItem from="1677790794416" duration="2104000" />
-      <workItem from="1677874644436" duration="25191000" />
+      <workItem from="1677874644436" duration="28254000" />
+      <workItem from="1678298130614" duration="120000" />
+      <workItem from="1679006317699" duration="115000" />
+      <workItem from="1679167806899" duration="980000" />
+      <workItem from="1679525805655" duration="31581000" />
     </task>
+    <task id="LOCAL-00001" summary="BAD CODE">
+      <created>1678048723853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678048723853</updated>
+    </task>
+    <task id="LOCAL-00002" summary="BAD CODE">
+      <created>1678048741573</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678048741573</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="BAD CODE" />
+    <option name="LAST_COMMIT_MESSAGE" value="BAD CODE" />
   </component>
 </project>

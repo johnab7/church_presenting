@@ -430,15 +430,15 @@ textFit(document.getElementsByClassName('box'));
                 </Modal.Footer>
             </Modal>
 
-            <br></br>   
+            <br></br>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6">
-                {items && items.map((item) => (
-                    <Col style={{}}>
+                {items && items.map((item,index) => (
+                    <Col style={{}} key={index}>
                         <Card style={{ width: '17rem' }}>
                             <Card.Body>
-                                <div className="cen">
-                                    <Card.Text>
-                                        {truncateString(item.c, 600)}
+                                <div className="cen" >
+                                    <Card.Text className="cus">
+                                        <div  dangerouslySetInnerHTML={{ __html: item.c }} />
                                     </Card.Text>
                                     <Button variant="primary" onClick={() => sendLive(item.c)}>Go Live</Button>{"    "}
                                     <Button variant="secondary" className="btm-mar" onClick={() => edit(items.indexOf(item))}>Edit</Button>
