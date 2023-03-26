@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68e98dae-1bec-4a7f-a0b0-4f531ad14a9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/bible/bible.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/S.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/ls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bible.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bible/bible.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bible/bible.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +93,9 @@
       <workItem from="1678298130614" duration="120000" />
       <workItem from="1679006317699" duration="115000" />
       <workItem from="1679167806899" duration="980000" />
-      <workItem from="1679525805655" duration="31581000" />
+      <workItem from="1679525805655" duration="34002000" />
+      <workItem from="1679827302882" duration="29000" />
+      <workItem from="1679827411087" duration="667000" />
     </task>
     <task id="LOCAL-00001" summary="BAD CODE">
       <created>1678048723853</created>
@@ -115,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678048741573</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="BAD CODE v2">
+      <created>1679784032431</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679784032431</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BAD CODE" />
-    <option name="LAST_COMMIT_MESSAGE" value="BAD CODE" />
+    <MESSAGE value="BAD CODE v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="BAD CODE v2" />
   </component>
 </project>

@@ -299,9 +299,25 @@ textFit(document.getElementsByClassName('box'));
     function handleVerseClick(verse) {
         const l = getVerce(verse.book, verse.chapter, verse.verse);
         console.log(l);
-        if (book && book[0] && book[0].value !== verse.book.value) {
-            setBook([{ label: verse.book.label, value: verse.book.value }]);
+        if(book){
+            if(Array.isArray(book)){
+                if(book.length > 0){
+                    if (book[0].value !== verse.book.value) {
+                        setBook([{label: verse.book.label, value: verse.book.value}]);
+                    }
+                }
+                else {
+                    setBook([{label: verse.book.label, value: verse.book.value}]);
+                }
+            }
+            else {
+                if (book.value !== verse.book.value) {
+                    setBook([{label: verse.book.label, value: verse.book.value}]);
+                }
+            }
+
         }
+        
         setChapter(verse.chapter);
         setVerse(verse.verse);
         setPreviewLive(getPreviw(l));
@@ -519,12 +535,12 @@ textFit(document.getElementsByClassName('box'));
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <ListGroup>
-                        {book && chapter && (Array.isArray(book) ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1])?.Chapter[chapter -1] && (vsearchTerm
-                                ? (Array.isArray(book) ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1]).Chapter[chapter -1].Verse.filter((verse) => {
+                        {book && chapter && (Array.isArray(book) && book[0] && book[0].value ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1])?.Chapter[chapter -1] && (vsearchTerm
+                                ? (Array.isArray(book) && book[0] && book[0].value ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1]).Chapter[chapter -1].Verse.filter((verse) => {
                                     const searchWords = vsearchTerm.toLowerCase().split(" ");
                                     return searchWords.every((word) => verse.Verse.includes(word));
                                 })
-                                : (Array.isArray(book) ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1]).Chapter[chapter -1].Verse
+                                : (Array.isArray(book) && book[0] && book[0].value ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1]).Chapter[chapter -1].Verse
                         ).map((Verse, index) => (
                             <ListGroup.Item
                                 action
