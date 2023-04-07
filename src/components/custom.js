@@ -4,7 +4,9 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 import ReactQuill from 'react-quill'; // ES6
-import 'react-quill/dist/quill.bubble.css'; // ES6
+import 'react-quill/dist/quill.bubble.css';
+import {FormControl, InputGroup, ListGroup, Offcanvas} from "react-bootstrap";
+import bible from "./data/bible.json"; // ES6
 
 const Custom = () => {
     const mc = new BroadcastChannel('mc');
@@ -20,6 +22,7 @@ const Custom = () => {
     const handleShowG = () => setShowG(true);
     const handleShowE = () => setShowE(true);
     const handleCloseE = () => setShowE(false);
+    const [showSidebar, setShowSidebar] = useState(false);
 
     var [t, setT] = useState();
     useEffect(() => {
@@ -374,6 +377,23 @@ textFit(document.getElementsByClassName('box'));
                 <Button variant="secondary" className="btn-mar" type='button' onClick={handleShowG}>
                 Genarate
                 </Button>
+                {showSidebar ? (
+                    <Button
+                        variant="secondary"
+                        className="cen btn-mar"
+                        onClick={() => setShowSidebar(false)}
+                    >
+                        Hide Sidebar
+                    </Button>
+                ) : (
+                    <Button
+                        variant="secondary"
+                        className="cen btn-mar"
+                        onClick={() => setShowSidebar(true)}
+                    >
+                        Show Sidebar
+                    </Button>
+                )}
                 <Button variant="success" className="btn-mar" type='button' onClick={exportToJson}>
                     Export
                 </Button>
@@ -447,6 +467,27 @@ textFit(document.getElementsByClassName('box'));
                             </Card.Body>
                         </Card></Col>))}
             </div>
+
+            <Offcanvas
+                show={showSidebar}
+                onHide={() => setShowSidebar(false)}
+                scroll={true}
+                backdrop={false}
+                placement={"end"}
+            >
+            <Offcanvas.Header closeButton/>
+            <Offcanvas.Body>
+                <ListGroup>
+                    {items && items.map((item,index) => (
+                        <ListGroup.Item key={index} className="cus" onClick={() => sendLive(item.c)}>
+                            <div  dangerouslySetInnerHTML={{ __html: item.c }} />
+                        </ListGroup.Item>
+                    ))}
+                </ListGroup>
+            </Offcanvas.Body>
+        </Offcanvas>
+
+
         </div>
     );
 }
