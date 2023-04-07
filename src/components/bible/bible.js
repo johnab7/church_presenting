@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Select from "react-dropdown-select";
 import tbible from "../data/biblet.json";
 import bible from "../data/bible.json";
@@ -24,6 +24,7 @@ const Bible = () => {
     };
 
     const mc = new BroadcastChannel("mc");
+
 
     function sendLive(mes) {
         mc.postMessage(mes)
@@ -404,7 +405,10 @@ textFit(document.getElementsByClassName('box'));
                                 name="verse"
                                 min="1"
                                 value={verse}
-                                onChange={(e) => setVerse(e.target.value)}
+                                onChange={(e) => {
+                                    setVerse(e.target.value)
+
+                                }}
                                 className="form-control"
                                 id="verse"
                             />
@@ -534,7 +538,7 @@ textFit(document.getElementsByClassName('box'));
                     </InputGroup>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <ListGroup>
+                    <ListGroup >
                         {book && chapter && (Array.isArray(book) && book[0] && book[0].value ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1])?.Chapter[chapter -1] && (vsearchTerm
                                 ? (Array.isArray(book) && book[0] && book[0].value ? bible.Book[book[0].value - 1] : bible.Book[book.value - 1]).Chapter[chapter -1].Verse.filter((verse) => {
                                     const searchWords = vsearchTerm.toLowerCase().split(" ");
@@ -546,6 +550,8 @@ textFit(document.getElementsByClassName('box'));
                                 action
                                 onClick={() => handleVerseClick({book: Array.isArray(book) ? book[0] : book, chapter: chapter, verse: parseInt(Verse.Verseid.substring(Verse.Verseid.length - 3)) + 1})}
                                 key={index}
+                                className={verse && parseInt(verse) === parseInt(Verse.Verseid.substring(Verse.Verseid.length - 3)) + 1 ? "active" : ""}
+
                             >
                                 <div>{parseInt(Verse.Verseid.substring(Verse.Verseid.length - 3)) + 1}. {Verse.Verse}</div>
                             </ListGroup.Item>
