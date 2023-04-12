@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="68e98dae-1bec-4a7f-a0b0-4f531ad14a9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bible/bible.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bible/bible.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,24 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/sameuel-yarasani/Documents/Projects/react-native/songs of zion/soz",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/home/sameuel-yarasani/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5787.30/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sameuel-yarasani/Documents/Projects/react-native/songs of zion/soz&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/sameuel-yarasani/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5787.30/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/components/bible" />
     </key>
   </component>
@@ -99,7 +102,8 @@
       <workItem from="1679827302882" duration="29000" />
       <workItem from="1679827411087" duration="815000" />
       <workItem from="1679848950254" duration="60000" />
-      <workItem from="1680825531176" duration="672000" />
+      <workItem from="1680825531176" duration="4500000" />
+      <workItem from="1681325090275" duration="4133000" />
     </task>
     <task id="LOCAL-00001" summary="BAD CODE">
       <created>1678048723853</created>
@@ -129,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679828107555</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="BAD CODE v4 sidebar for custom.js">
+      <created>1680826264883</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680826264883</updated>
+    </task>
+    <task id="LOCAL-00006" summary="BAD CODE v4 added highlight">
+      <created>1680829780791</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680829780791</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +157,8 @@
     <MESSAGE value="BAD CODE" />
     <MESSAGE value="BAD CODE v2" />
     <MESSAGE value="BAD CODE v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="BAD CODE v3" />
+    <MESSAGE value="BAD CODE v4 sidebar for custom.js" />
+    <MESSAGE value="BAD CODE v4 added highlight" />
+    <option name="LAST_COMMIT_MESSAGE" value="BAD CODE v4 added highlight" />
   </component>
 </project>
