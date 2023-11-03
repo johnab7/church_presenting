@@ -274,7 +274,7 @@ const mc = new BroadcastChannel("mc");
 export default function sendLive(mes) {
     mc.postMessage(mes);
     const s = JSON.parse(localStorage.getItem("s"));
-    const ws = s && s.ws ? new WebSocket(`ws://${s.ws}:4444`) : null;
+    const ws = s && s.ws ? new WebSocket(`ws://${s.ws}:4488`) : null;
     if (ws) {
         ws.onopen = function () {
             console.log('WebSocket connection established.');
